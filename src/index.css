@@ -1,13 +1,205 @@
-body {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border-radius: 32px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  width: 1319px;
+  height: 879px;
+  background: linear-gradient(304deg, #F8F8FF 0%, #FFF 86.71%);
+  box-shadow: 0px 49px 32px -19px rgba(56, 56, 150, 0.15);
+  display: flex;
+  flex-direction: row;
+  border-radius: 32px;
+}
+
+.sidebar{
+  width: 260px;
+  height: 879px;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  /*flex-shrink: 0;*/
+  background-color: #F8F8FF;
+  position: relative;
+}
+
+.profile{
+  width: 178px;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 44px 49px 38px;
+  padding-top: 58px;
+  gap: 14px;
+  
+  
+}
+
+.profile img{
+  width: 55px;
+  height: 55px;
+  border-radius: 17px;
+  object-fit: cover;
+}
+
+.profile p{
+  width:109px;
+  height: 45px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.profile p span{
+  color: #1A194D;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+}
+
+.profile p .small{
+  color: #62618F;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/****************************/
+
+.sidebar ul{
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  color: #1A194D;
+  padding: 0 16px;
+}
+
+.sidebar ul li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 8px 8px 16px;
+  gap: 10px;
+  
+  color: var(--Style, #62618F);
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.sidebar ul li div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  align-self: stretch;
+  border-radius: 24px;
+  background-color: #EE4D38;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar ul li:hover div{
+ opacity: 1;
+}
+
+.sidebar ul li img{
+  width: 32px;
+  height: 32px;
+}
+
+/*********************************/
+
+.logout-btn{
+  position: absolute;
+  bottom: 10px;
+  margin: 0 0 29px 6px;
+  display: flex;
+  padding: 8px 8px 8px 16px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  color: #62618F;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+/********************************/
+
+.header{
+  width: 670px;
+  display: flex;
+  flex-direction: column;
+}
+.header h1{
+  color: #1A194D;
+  font-family: inherit;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 65px 571px 49px 72px;
+}
+
+.header-summary{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 313px ;
+  height: 49px;
+  margin-left: 72px;
+  margin-bottom: 50px;
+}
+
+.header-summary h4{
+  color: #1A194D;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header-summary p{
+  color: #62618F;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }

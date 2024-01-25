@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Billing from './pages/Billing';
+import General from './pages/General';
+import Invitations from './pages/Invitations';
+import Password from './pages/Password';
+import Apps from './pages/Apps';
+import './index.css';
+import Sidebar from './components/Sidebar';
 
-function App() {
+const App = () =>  {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+       <Sidebar />
+
+
+       <Routes>
+         <Route path="/" element={<General />} />
+         <Route path="/general" element={<General />} />
+          
+          <Route path="/password" element={<Password />} />
+          <Route path="/invitations" element={<Invitations />} />
+          <Route path="/billing" element={<Billing />} />
+          <Route path="/apps" element={<Apps />} />
+       </Routes>
+      </BrowserRouter>
+      
+      
     </div>
   );
 }

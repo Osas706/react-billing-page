@@ -8,12 +8,13 @@ import Apps from './pages/Apps';
 import './index.css';
 import Sidebar from './components/Sidebar';
 
+import Subscribe from './components/Subscribe';
+
 const App = () =>  {
   return (
     <div className="App">
       <BrowserRouter>
        <Sidebar />
-
 
        <Routes>
          <Route path="/" element={<General />} />
@@ -26,7 +27,7 @@ const App = () =>  {
        </Routes>
       </BrowserRouter>
       
-      
+      <Subscribe />
     </div>
   );
 }

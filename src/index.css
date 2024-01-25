@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body{
@@ -11,24 +12,28 @@ body{
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border-radius: 32px;
+  max-width: 1319px;
+  display: flex;
+  justify-self: center;
 }
 
 .App{
-  width: 1319px;
-  height: 879px;
+  max-width: 1319px;
+  height: 100vh;
   background: linear-gradient(304deg, #F8F8FF 0%, #FFF 86.71%);
   box-shadow: 0px 49px 32px -19px rgba(56, 56, 150, 0.15);
   display: flex;
+
+  justify-self: center;
   flex-direction: row;
-  border-radius: 32px;
+
 }
 
 .sidebar{
-  width: 260px;
-  height: 879px;
-  border-top-left-radius: 32px;
-  border-bottom-left-radius: 32px;
+  width: 230px;
+  height: 100vh;
+ /* border-top-left-radius: 32px; 879px*/
+ /* border-bottom-left-radius: 32px; */
   /*flex-shrink: 0;*/
   background-color: #F8F8FF;
   position: relative;
@@ -164,15 +169,16 @@ body{
   width: 670px;
   display: flex;
   flex-direction: column;
+
 }
 .header h1{
   color: #1A194D;
   font-family: inherit;
-  font-size: 32px;
+  font-size: 38px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 65px 571px 49px 72px;
+  margin: 25px 571px 29px 72px;
 }
 
 .header-summary{
@@ -202,4 +208,251 @@ body{
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+/********************************/
+
+.table-header{
+  display: flex;
+  padding: 0px 16px;
+  align-items: flex-start;
+  gap: 168px;
+  border: 1px solid #201e1e7a;
+  border-radius: 3px;
+}
+
+.table-header h6{
+  color: #62618F;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 12px;
+}
+
+.table-item{
+  display: flex;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 114px;
+  border-radius: 8px;
+  width:582px ;
+  height: 56px;
+}
+
+.table-item:hover{
+ box-shadow: 0px 8px 19px 0px rgba(223, 223, 253, 0.60);
+}
+
+.table-item p{
+  color: #1A194D;
+  font-family: inherit;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width:93px ;
+  height: 24px;
+  margin-left: 12px;
+}
+
+.table-item span{
+  width: 150px;
+  height: 24px;
+  color: #1A194D;
+  font-family: inherit;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.download-btn{
+  display: flex;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid  #CBCBD9;
+  color: #1A194D;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  background-color: #f1f1f8;
+}
+
+.link{
+  width: 86px;
+  height: 24px;
+  margin-left: 68px;
+  margin-bottom: 81px;
+  color: #EE4D38;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+/****************************************/
+
+.payment-header{
+  width: 313px;
+  height: 49px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 40px  0 22px 40px ;
+}
+
+.payment-header h4 {
+  color: #1A194D;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.payment-header p {
+  color: #62618F;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.payment{
+  display: flex;
+  width: 601px;
+  align-items: center;
+  gap: 16px;
+  margin-left: 40px;
+}
+
+.payment img{
+  width: 67px;
+  height: 38px;
+  border: 1px solid #62618F;  
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.payment p{
+  width: 384px;
+  color: #1A194D;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.payment button{
+  width: 98px;
+  height: 40px;
+  display: flex;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid #CBCBD9;
+  color:  #1A194D;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+/***********************************************/
+
+.subscription{
+  width:258px ;
+  height: 221px;
+  display: inline-flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 16px;
+      background: #EE4D38;
+  box-shadow: 0px 8px 19px 0px rgba(223, 223, 253, 0.60);
+  margin: 162px 56px 496px 76px ;
+}
+
+.subscription h4{
+width: 77px ;
+height: 24px;
+color:  #FFF;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  align-self: center;
+}
+
+.subscription-option{
+  width: 145px ;
+  height: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: center;
+}
+
+.subscription-option h3{
+  color:  #FFF;
+  font-family: inherit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.subscription-option h6{
+  color:  #FFF;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+} 
+
+.subscription button{
+  width: 194px ;
+  height: 40px;
+  color: #FFF;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  padding: 8px 16px;
+  align-items: center;
+  justify-content:center;
+  gap: 10px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.50);
+  cursor: pointer;
+  background-color: transparent; 
+  transition: 0.3s ease-in-out;   
+}
+
+.subscription button:hover{
+ font-weight: 800;
 }
